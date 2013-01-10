@@ -1,0 +1,366 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+body {
+  background: #fff url(../images/bg.png) top center no-repeat fixed;
+}
+
+body, p, ul, ol, b, i, blockquote, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+.disclaimer {
+  background: #eee;
+  padding: .5em;
+  color: #fff;
+  background: rgba(0,0,0,.6);
+  margin-bottom: .5em;
+  text-align: center;
+}
+
+.disclaimer p, a {color: #fff;}
+.disclaimer a {margin-left: 1em;  text-decoration: underline;}
+
+#header {margin: 0 0 1.5em 0; }
+
+
+#header h1 {
+  font-weight: normal;
+  margin: 0; 
+  padding: 0;
+}
+
+#header h1 span {font-weight: bold;}
+
+#header h1 {
+  display: block;
+  color: #333;
+  height: 120px;
+  width: 100%;
+  padding: .75em 0 1em 80px;
+  background: url(../images/a.png) center left no-repeat;
+}
+
+@media only screen and (max-width: 420px) { 
+  
+  #header h1 {
+  background: url(../images/a.png) center left no-repeat; 
+  background-size: contain;
+  font-size: 2em; 
+  height: auto;
+  padding: .18em 1.75em;
+  margin-top: .4em;
+  }
+
+}
+
+@media only screen and (orientation: landscape) {
+  body {font-size: 75%;}
+}
+
+#header h1 span {font-weight: normal; color: #888;}
+
+abbr:hover {cursor: pointer;}
+
+
+ul.sublist {margin: 0; padding: 0; text-align: right;}
+ul.sublist li {display: inline-block; list-style: none; text-align: right; margin: .5em 0 0 1em; padding-left: 1em;}
+ul.sublist li.second {border-left: 1px solid #ccc; }
+ul.sublist li.second a {color: #D50B53}
+ul.sublist li a {color: #444;}
+
+@media only screen and (max-width: 420px) { 
+  ul.sublist li {display: none;}
+  
+}
+
+
+h2  {
+  font-weight: normal; 
+  font-family: 'Abel', Helvetica, sans-serif;  
+  text-transform: none;
+  margin: 0; 
+  padding: 0;
+  line-height: 1.3em;
+  text-transform: uppercase;
+}
+
+h2 {font-size: 2.5em; line-height: 1.6em; font-weight: normal; margin: 0 0 .75em 0;}
+h3 {font-size: 1.2em; font-weight: bold; font-family: 'Lato', Helvetica, sans-serif;}
+h4 {font-size: 1.2em; padding-bottom: 1em; }
+h5 {font-size: 1.1em;}
+h6 {font-size: 1.1em;}
+
+#footer h4 {padding-bottom: 0;}
+
+h3, h4, h5, h6 {color: #626262; text-shadow: 0 1px 0 rgba(255,255,255,.9);}
+
+.bold h3 {text-shadow: none;}
+.bold p {color: #fff; font-weight: 500;}
+
+.reveal-modal h2 {margin-bottom: 0; padding-bottom: .2em; font-size: 1.4em; margin-bottom: .2em;}
+.reveal-modal h3 {margin-top: 0; padding-top: 0; font-size: 1.6em;}
+.reveal-modal h4 {margin-top: 1em;}
+.reveal-modal .secondary {padding-top: 1.5em;}
+
+.margin-top {margin-top: 1em; clear: both;}
+
+a.feature-link {display: block; color: #222; font-size: 1.1em; text-shadow: 0 1px 0 rgba(255,255,255,.8); text-align: center; background: #ddd; margin: 1.5em 2% 0 2%; clear: both; padding: 1em; }
+
+.feature-box .panel {margin-bottom: 1.75em; text-center;}
+
+.row .panel .description p {font-weight: normal; }
+.row .panel p {font-family: 'Lato', Helvetica, sans-serif; font-weight: normal; font-weight: 100; color: #777; text-shadow: 0 1px 0 rgba(255,255,255,.8);}
+
+.close-reveal-modal {font-size: 4em; font-weight: bold; margin: .9em 5%;}
+
+.commerce h2, a.more.commerce {color: #481872;}
+.energy h2, a.more.energy {color: #8bc541;}
+.health h2, a.more.health {color: #1cb3cc;}
+.education h2, a.more.education {color: #C3423A;}
+.finance h2, a.more.finance {color: #f0ab2e;} 
+.development h2, a.more.development {color: #603813;}
+.safety h2, a.more.safety {color: #15226D;}
+
+p {font-size: 1.15em; margin: .25em 0; line-height: 1.4em; font-weight: normal; color: #535353;}
+
+a.more {font-weight: bold; text-shadow: 0 1px 0 rgba(255,255,255,.9); background: #fff; background: rgba(255,255,255,.7); color: #444; padding: .5em 1em; border: 1px solid #eee; text-decoration: none; margin: 0;}
+
+a.more.commerce:hover, a.more.commerce:active {border: 1px solid #481872;}
+a.more.energy:hover, a.more.energy:active {border: 1px solid #8bc541;}
+a.more.health:hover, a.more.health:active {border: 1px solid #1cb3cc;}
+a.more.education:hover, a.more.education:active {border: 1px solid #C3423A;}
+a.more.finance:hover, a.more.finance:active {border: 1px solid #f0ab2e;}
+a.more.development:hover, a.more.development:active {border: 1px solid #603813;}
+a.more.safety:hover, a.more.safety:active {border: 1px solid #15226D;}
+
+h4.examples {font-weight: 500;}
+
+.commerce h4.examples {color: #481872;}
+.energy h4.examples {color: #8bc541;}
+.health h4.examples {color: #1cb3cc;}
+.education h4.examples {color: #C3423A;}
+.finance h4.examples {color: #f0ab2e;}
+.development h4.examples {color: #603813;}
+.safety h4.examples {color: #15226D;}
+
+a.more.commerce:hover, a.more.commerce:active {border: 1px solid #481872}
+a.more.energy:hover, a.more.energy:active {border: 1px solid #8bc541}
+a.more.health:hover, a.more.health:active {border: 1px solid #1cb3cc}
+a.more.education:hover, a.more.education:active {border: 1px solid #C3423A}
+a.more.finance:hover, a.more.finance:active {border: 1px solid #f0ab2e}
+a.more.development:hover, a.more.development:active {border: 1px solid #603813}
+a.more.safety:hover, a.more.safety:active {border: 1px solid #15226D}
+
+a.more {display: inline-block; margin-bottom: 1.5em;}
+
+.row .panel {padding-top: 2em; min-height: 8.5em; font-size: .9em; font-weight: normal; }
+
+.row .panel a {font-weight: normal; font-weight: 100; border: 1px solid red;}
+
+.row .mobile-two .panel {height: auto;}
+
+.mobile-two .description.bold {height: auto; padding: 0;}
+
+.reveal-modal .row .panel {min-height: 5em; text-align: center; background: rgba(0,0,0,.01); color: #333; font-weight: bold;}
+.reveal-modal .row .panel p {font-weight: bold;}
+
+.panel {background: #F2F2F2; background: rgba(230,230,230,.7);}
+
+.row.video {margin-bottom: 1.5em;}
+
+.row .panel:hover,
+.row .panel:active {-webkit-box-shadow: 0 0 1px rgba(0,0,0,.6) inset; cursor: pointer;}
+
+.row .description {
+  bottom: 0;
+  left: 0;
+  display: block;
+}
+
+#header .align-right {padding-top: 2.2em;}
+
+@media only screen and (max-width: 770px) {
+
+  #header .align-right {display: none;}
+  
+}
+
+.align-right {text-align: right;}
+
+.description.bold {color: #fff;  margin: 0 0 22px 0}
+.description.bold h3 {color: #fff; margin-top: .4em; padding: .3em .5em 0 .5em;}
+.description.bold p {padding: 0 .65em 1em .65em;}
+.description h3 {padding: 0; margin: 0;}
+
+.by-line{
+	font-size: 12px;
+	display: inline;
+	position: absolute;
+	top: 10px;
+	left: 25px;
+	color: #feffff;
+}
+
+.energy .description.bold {background: #C3423A;}
+.health .description.bold {background: #1cb3cc;}
+.education .description.bold {background: #C3423A;}
+.finance .description.bold {background: #f0ab2e;}
+.commerce .description.bold {background: #351947;}
+
+a .description.bold img {border: none; width: 100%;}
+
+h2.meta {font-size: .9em;}
+
+h1 {font-family: 'Abel', Helvetica, sans-serif;}
+
+abbr {text-decoration: none; border-bottom: none; color: inherit;}
+
+
+#footer {
+  background: #222;
+  background: rgba(0,0,0,.8);
+  color: #fff;
+  margin-top: 3em;
+  padding: 1em 0;
+  -webkit-box-shadow: 0 5px 7px rgba(0,0,0,.4) inset;
+  
+}
+
+#footer a {display: block; display: block; padding: .25em 0; color: #fff; color: rgba(255,255,255,.7); }
+#footer a:hover {background: rgba(255,255,255,.05);}
+#footer p, #footer h4 {
+  color: #fff;
+  text-transform: none; 
+}
+
+#footer h4 {font-size: 1.2em; color: rgba(255,255,255,.8); text-shadow: none; font-weight: bold;}
+
+#footer ul li {
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid #444;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+#footer ul li:last-child {border-bottom: none;}
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+.topic h2{
+  margin: 1em 0 .25em 0;
+
+}
+
+.feature {border: 1px solid #ccc;}
+
+
+h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display: block; border-top: 2px solid #ddd; border-bottom: 2px solid #ddd; text-shadow: 0 1px 0 rgba(255,255,255,.9);  color: #222; font-size: 3em; line-height: 1.3em; background: #eee; background: rgba(0,0,0,.05); padding: .5em 1em;}
+
+@media only screen and (max-width: 420px) { 
+  h2.salvo {font-size: 1.6em; margin-bottom: .3em;}
+}
+
+.blocks{
+	list-style-type: none;
+	margin-top: 42px;
+	text-align: right;
+}
+
+.blocks li{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	opacity: .9;
+	margin-right: 5px;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	padding-top: 5px;
+	font-weight: bold;
+}
+
+.blocks li:hover {opacity: 1; -webkit-box-shadow: 0 0 5px rgba(0,0,0,.2); cursor: pointer;}
+
+.blocks .commerce {background-color: #481872;}
+.blocks .energy {background-color: #8bc541;}
+.blocks .health {background-color: #1cb3cc;}
+.blocks .education {background-color: #C3423A;}
+.blocks .safety {background-color: #15226D;}
+.blocks .finance {background-color: #f0ab2e;} 
+.blocks .development {background-color: #603813;}
+
+.blocks li.development {margin-right: 0;}
+
+.blocks li a, .blocks li a:visited {color: #fff;}
+
+@media only screen and (max-width: 420px) { 
+  .blocks {text-align: center;}
+  .blocks li {width: 30px; height: 30px; margin-right: 2px; font-size: 14px;}
+}
+
+
+.reveal-modal .panel p {color: #333;}
+
+.reveal-modal .panel p.description {color: red; font-weight: normal; color: #787878; text-shadow: 0 1px 0 rgba(255,255,255,.9);}
+
+.search-box input{
+	font-family: 'Lato', Helvetica, sans-serif;
+  	font-weight: normal;
+  	font-size: 22px;
+	padding: 10px;
+}
+
+ul.panel-list li a {text-decoration: none; border-bottom: none; background: red;}
+
+/*** IE 7 ***/
+
+html.ie7 .panel {border: none; margin: 0 6% 2em 0;}
+
+html.ie7 .row .eight.columns .panel {margin: 0 3% 2em 0;}
+
+html.ie7 .columns {padding: 0; margin: 0; }
+
+html.ie7 ul.sublist {position: absolute; top: 0; right: 0;}
+html.ie7 ul.sublist li {float: left;}
+
+
+html.ie7 ul.blocks {clear: both;}
+
+html.ie7 .blocks li {float: right;}
+html.ie7 #header .blocks li {color: #fff;}
+html.ie7 #header .blocks li a, html.ie7 #header .blocks li a:visited {color: #fff;}
+html.ie7 #header .blocks li a abbr {color: #fff;}
+html.ie7 #header .blocks li.first {margin-right: 1.5%;}
+
+html.ie7 .description.bold {margin-right: 3%; padding: 0; overflow: hidden;}
+html.ie7 .description.bold img {width: 100%; margin: 0; padding: 0;}
+
+html.ie7 #header h1 {  display: block;
+  color: #333;
+  height: auto;
+  width: 100%;
+  margin-top: 0:
+  padding: 1em 0 1em 80px;
+  background: url(../images/a.png) center left no-repeat;
+  }
+
+html.ie7 a.feature-link {margin: 1em 3% 1em 0;}
+html.ie7 .reveal-modal p {padding-right: 3%;}
+
+html.ie7 .close-reveal-modal {margin-top: 2em;}
+
+html.ie7 #footer ul {margin: 0 2% 0 0;}
+html.ie7 #footer li {float: left; width: 100%;}
+html.ie7 #footer li a {color: #fff;}
+html.ie7 #footer li a:hover {text-decoration: underline;}
