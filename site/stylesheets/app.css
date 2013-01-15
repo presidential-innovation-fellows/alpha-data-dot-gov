@@ -68,8 +68,7 @@ body, p, ul, ol, b, i, blockquote, h2, h3, h4, h5, h6 {
 
 #header h1 span {font-weight: normal; color: #888;}
 
-abbr:hover {cursor: pointer;}
-
+abbr:hover, abbr:active {cursor: pointer;}
 
 ul.sublist {margin: 0; padding: 0; text-align: right;}
 ul.sublist li {display: inline-block; list-style: none; text-align: right; margin: .5em 0 0 1em; padding-left: 1em;}
@@ -174,11 +173,7 @@ a.more {display: inline-block; margin-bottom: 1.5em;}
 .reveal-modal .row .panel p {font-weight: bold;}
 
 .panel {background: #F2F2F2; background: rgba(230,230,230,.7);}
-
 .row.video {margin-bottom: 1.5em;}
-
-.row .panel:hover,
-.row .panel:active {-webkit-box-shadow: 0 0 1px rgba(0,0,0,.6) inset; cursor: pointer;}
 
 .row .description {
   bottom: 0;
@@ -290,7 +285,7 @@ h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display:
 	font-weight: bold;
 }
 
-.blocks li:hover {opacity: 1; -webkit-box-shadow: 0 0 5px rgba(0,0,0,.2); cursor: pointer;}
+.blocks li:hover {opacity: 1; -webkit-box-shadow: 0 0 5px rgba(0,0,0,.2);}
 
 .blocks .commerce {background-color: #481872;}
 .blocks .energy {background-color: #8bc541;}
