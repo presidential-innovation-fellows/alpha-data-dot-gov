@@ -44,7 +44,6 @@ body, p, ul, ol, b, i, blockquote, h2, h3, h4, h5, h6 {
   display: block;
   color: #333;
   height: 120px;
-  width: 100%;
   padding: .75em 0 1em 80px;
   background: url(../images/a.png) center left no-repeat;
 }
@@ -52,7 +51,7 @@ body, p, ul, ol, b, i, blockquote, h2, h3, h4, h5, h6 {
 @media only screen and (max-width: 420px) { 
   
   #header h1 {
-  background: url(../images/a.png) center left no-repeat; 
+  background: none; 
   background-size: contain;
   font-size: 2em; 
   height: auto;
@@ -165,7 +164,7 @@ a.more {display: inline-block; margin-bottom: 1.5em;}
 
 .row .panel {padding-top: 2em; min-height: 8.5em; font-size: .9em; font-weight: normal; }
 
-.row .panel a {font-weight: normal; font-weight: 100; border: 1px solid red;}
+.row .panel a {font-weight: normal; font-weight: 100; }
 
 .row .mobile-two .panel {height: auto;}
 
@@ -279,7 +278,7 @@ h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display:
 	width: 35px;
 	height: 35px;
 	opacity: .9;
-	margin-right: 5px;
+	margin-right: 2px;
 	color: #fff;
 	text-align: center;
 	font-size: 16px;
@@ -304,6 +303,16 @@ h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display:
 @media only screen and (max-width: 420px) { 
   .blocks {text-align: center;}
   .blocks li {width: 30px; height: 30px; margin-right: 2px; font-size: 14px;}
+}
+
+@media only screen and (max-width: 768px) { 
+  body {border: 3px solid black;}
+  #header .row .five.columns {width: 100%; float: none; text-align: center;}
+  .blocks, ul.sublist {text-align: center; margin: .5em;}
+  ul.sublist {margin: 0 0 1em 0;}
+  #header h1 {text-align: center;}
+  #header h1 {padding: .75em;}
+  
 }
 
 
