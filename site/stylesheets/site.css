@@ -105,6 +105,8 @@ h3, h4, h5, h6 {color: #626262; text-shadow: 0 1px 0 rgba(255,255,255,.9);}
 .bold h3 {text-shadow: none;}
 .bold p {color: #fff; font-weight: 500;}
 
+.reveal-modal {top: 20px;}
+
 .reveal-modal h2 {margin-bottom: 0; padding-bottom: .2em; font-size: 1.4em; margin-bottom: .2em;}
 .reveal-modal h3 {margin-top: 0; padding-top: 0; font-size: 1.6em;}
 .reveal-modal h4 {margin-top: 1em;}
