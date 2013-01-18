@@ -111,6 +111,9 @@ h3, h4, h5, h6 {color: #626262; text-shadow: 0 1px 0 rgba(255,255,255,.9);}
 .reveal-modal h4 {margin-top: 1em;}
 .reveal-modal .secondary {padding-top: 1.5em;}
 
+.reveal-modal .foundicon-globe{border-style: none;}
+.reveal-modal .foundicon-torso{border-style: none;}
+
 .margin-top {margin-top: 1em; clear: both;}
 
 a.feature-link {display: block; color: #222; font-size: 1.1em; text-shadow: 0 1px 0 rgba(255,255,255,.8); text-align: center; background: #ddd; margin: 1.5em 2% 0 2%; clear: both; padding: 1em; }
