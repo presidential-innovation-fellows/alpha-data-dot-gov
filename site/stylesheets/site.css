@@ -106,13 +106,15 @@ h3, h4, h5, h6 {color: #626262; text-shadow: 0 1px 0 rgba(255,255,255,.9);}
 
 .reveal-modal {top: 20px;}
 
-.reveal-modal h2 {margin-bottom: 0; padding-bottom: .2em; font-size: 1.4em; margin-bottom: .2em;}
-.reveal-modal h3 {margin-top: 0; padding-top: 0; font-size: 1.6em;}
+.reveal-modal h2 {margin-bottom: 0; padding-bottom: .2em; font-size: 1.4em; margin-bottom: .2em; }
+.reveal-modal h3 {margin-top: 0; padding-top: 0; font-size: 1.6em; display: inline-block; margin-right: .5em; border-right: 1px solid rgba(0,0,0,.1); padding-right: .75em;}
 .reveal-modal h4 {margin-top: 1em;}
 .reveal-modal .secondary {padding-top: 1.5em;}
 
-.reveal-modal .foundicon-globe{border-style: none;}
-.reveal-modal .foundicon-torso{border-style: none;}
+.reveal-modal .foundicon-globe {border-style: none;}
+.reveal-modal .foundicon-torso {border-style: none;}
+
+i.foundicon-globe, i.foundicon-torso {display: inline-block; margin-top: .75em;}
 
 .margin-top {margin-top: 1em; clear: both;}
 
@@ -123,7 +125,7 @@ a.feature-link {display: block; color: #222; font-size: 1.1em; text-shadow: 0 1p
 .row .panel .description p {font-weight: normal; }
 .row .panel p {font-family: 'Lato', Helvetica, sans-serif; font-weight: normal; font-weight: 100; color: #777; text-shadow: 0 1px 0 rgba(255,255,255,.8);}
 
-.close-reveal-modal {font-size: 4em; font-weight: bold; margin: .9em 5%;}
+.row .close-reveal-modal {font-size: 2em; font-weight: bold; margin: .9em 1em;}
 
 .commerce h2, a.more.commerce {color: #481872;}
 .energy h2, a.more.energy {color: #8bc541;}
