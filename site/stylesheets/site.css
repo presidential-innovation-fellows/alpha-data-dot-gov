@@ -27,7 +27,15 @@ body, p, ul, ol, b, i, blockquote, h2, h3, h4, h5, h6 {
 }
 
 .disclaimer p, a {color: #fff;}
-.disclaimer a {margin-left: 1em;  text-decoration: underline;}
+.disclaimer a {margin-left: 1em; font-size: .9em;  text-decoration: none; border-bottom: 1px solid #eee; border-bottom: 1px solid rgba(255,255,255,.5);}
+
+@media only screen and (max-width: 620px) { 
+  .disclaimer span {display: block;} 
+}
+
+.disclaimer a b {font-weight: bold;}
+
+.disclaimer a:hover {color: #ccc;}
 
 #header {margin: 0 0 1.5em 0; }
 
@@ -120,9 +128,11 @@ i.foundicon-globe, i.foundicon-torso {display: inline-block; margin-top: .75em;}
 
 a.feature-link {display: block; color: #222; font-size: 1.1em; text-shadow: 0 1px 0 rgba(255,255,255,.8); text-align: center; background: #ddd; margin: 1.5em 2% 0 2%; clear: both; padding: 1em; }
 
+a.feature-link.dev-link {background: #cdcdcd;}
+
 .feature-box .panel {margin-bottom: 1.75em; text-center;}
 
-.row .panel .description p {font-weight: normal; }
+.row .panel .description p {font-weight: normal; margin-bottom: .4em;}
 .row .panel p {font-family: 'Lato', Helvetica, sans-serif; font-weight: normal; font-weight: 100; color: #777; text-shadow: 0 1px 0 rgba(255,255,255,.8);}
 
 .row .close-reveal-modal {font-size: 2em; font-weight: bold; margin: .9em 1em;}
@@ -177,6 +187,8 @@ a.more {display: inline-block; margin-bottom: 1.5em;}
 
 .reveal-modal .row .panel {min-height: 5em; text-align: center; background: rgba(0,0,0,.01); color: #333; font-weight: bold;}
 .reveal-modal .row .panel p {font-weight: bold;}
+
+.reveal-modal p {margin-bottom: 1em;}
 
 .panel {background: #F2F2F2; background: rgba(230,230,230,.7);}
 .row.video {margin-bottom: 1.5em;}
