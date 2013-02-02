@@ -278,7 +278,7 @@ abbr {text-decoration: none; border-bottom: none; color: inherit;}
 .feature {border: 1px solid #ccc;}
 
 
-h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display: block; border-top: 2px solid #ddd; border-bottom: 2px solid #ddd; text-shadow: 0 1px 0 rgba(255,255,255,.9);  color: #222; font-size: 3em; line-height: 1.3em; background: #eee; background: rgba(0,0,0,.05); padding: .5em 1em;}
+h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display: block; border-top: 2px solid #ddd; border-bottom: 2px solid #ddd; text-shadow: 0 1px 0 rgba(255,255,255,.9); text-align: center;  color: #222; font-size: 2.8em; line-height: 1.3em; background: #eee; background: rgba(0,0,0,.05); padding: .5em 1em;}
 
 @media only screen and (max-width: 420px) { 
   h2.salvo {font-size: 1.6em; margin-bottom: .3em;}
@@ -322,7 +322,7 @@ h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display:
   .blocks li {width: 30px; height: 30px; margin-right: 2px; font-size: 14px;}
 }
 
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 790px) { 
   body {border: 3px solid black;}
   #header .row .five.columns {width: 100%; float: none; text-align: center;}
   .blocks, ul.sublist {text-align: center; margin: .5em;}
@@ -330,8 +330,17 @@ h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display:
   #header h1 {text-align: center;}
   #header h1 {padding: .75em;}
   
+  
+  
 }
 
+@media only screen and (max-width: 790px) { 
+  #header .logo.seven.columns {display: block; float: none; width: 100%;}
+  .blocks {text-align: center; margin: 0 auto; text-align: center; clear: both;}
+  #header ul.sublist.right {clear: both; text-align: center; float: none;}
+  #header ul.sublist.right li {text-align: center; float: none;}
+  ul.blocks {float: none;}
+}
 
 .reveal-modal .panel p {color: #333;}
 
