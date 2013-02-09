@@ -45,6 +45,7 @@
 <script src="javascripts/jquery-1.8.3.min.js"></script>
 <script src="javascripts/smoothscroll.js"></script>
 <script src="javascripts/jquery.foundation.reveal.js"></script>
+<script src="javascripts/external-links.js"></script>
 
 </head>
 <body>
@@ -236,7 +237,6 @@
 </a>
 </div><!-- /four columns -->
 
-</div><!-- /row -->
 
 
 <div id="commerceModal-one" class="reveal-modal large commerce">
@@ -255,9 +255,12 @@
 <a target="_blank" class="feature-link dev-link" href="https://www.census.gov/developers/">See Census APIs</a>
 
 <a class="close-reveal-modal">×</a>
-
-</div>
 </div><!-- /reveal-modal -->
+
+</div><!-- /row -->
+
+
+
 
 <!-- /Commerce Modal one -->
 
@@ -1999,10 +2002,15 @@
 </div><!-- /footer -->
 
 
-
-
-
-
+<div class="row">
+<div id="ExternalModal" class="reveal-modal medium">
+  <p class="lead">Data in Action</p>
+  <p>You are about to leave Data.gov. This is an example of data in use, Data.gov does not endorse the company or organization.</p>
+  <p>You will now access: <span id="external-link-text"></span></p>
+  <a id="external-link" class="success button" href="#" target="_blank">Continue</a>
+  <a class="close-reveal-modal" href="#">x</a>
+</div>
+</div>
 
 
 
