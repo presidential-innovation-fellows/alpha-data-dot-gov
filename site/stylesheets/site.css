@@ -276,7 +276,7 @@ h2 abbr {text-transform: uppercase; background: #eee; background: rgba(0,0,0,.03
 
 a.success.button {border: none; color: #fff; background: #777; background: rgba(0,0,0,.5);}
 
-h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display: block; border-top: 2px solid #ddd; border-bottom: 2px solid #ddd; text-shadow: 0 1px 0 rgba(255,255,255,.9); text-align: center;  color: #222; font-size: 2.8em; line-height: 1.3em; background: #eee; background: rgba(0,0,0,.05); padding: .5em 1em;}
+h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display: block; border-top: 2px solid #ddd; border-bottom: 2px solid #ddd; text-shadow: 0 1px 0 rgba(255,255,255,.9); text-align: center;  color: #222; font-size: 2.7em; line-height: 1.3em; background: #eee; background: rgba(0,0,0,.05); padding: .5em 1em;}
 
 @media only screen and (max-width: 420px) { 
   h2.salvo {font-size: 1.6em; margin-bottom: .3em;}
