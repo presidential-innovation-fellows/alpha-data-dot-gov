@@ -1,15 +1,14 @@
 // WebTrends SmartSource Data Collector Tag
 // Version: 9.4.0     
-// Tag Builder Version: 3.3
-// Created: 2/7/2012 8:51:17 PM
+// Tag Builder Version: 4.1
+// Created: 2/21/2013 6:09:58 PM
 
 function WebTrends(){
 	var that=this;
 	// begin: user modifiable
-	this.dcsid="dcskvhvj85dv0ho233advllsc_7b4v";
+	this.dcsid="dcssx8eeg3dv0hs5ocfndcjcf_9y3x";
 	this.domain="statse.webtrendslive.com";
-	this.timezone=-6;
-	this.fpcdom=".data.gov";
+	this.timezone=-5;
 	this.onsitedoms="";
 	this.downloadtypes="xls,doc,pdf,txt,csv,zip,docx,xlsx";
 	this.navigationtag="div,table";
@@ -17,23 +16,39 @@ function WebTrends(){
 	this.trimoffsiteparams=true;
 	this.enabled=true;
 	this.i18n=false;
-	this.fpc="WT_FPC";
 	this.paidsearchparams="gclid";
 	this.splitvalue="";
 	this.preserve=true;
+	this.cookieTypes = "all";
+	this.FPCConfig = {
+		enabled: (this.cookieTypes === "all" || this.cookieTypes == "firstPartyOnly"),
+		name: "WT_FPC",
+		domain: ".alpha.data.gov",
+		expires: 63113851500
+	};
+	this.TPCConfig = {
+		enabled: (this.cookieTypes === "all"),
+		cfgType: (this.cookieTypes === "all") ? "":"1"
+	};
 	// end: user modifiable
 	this.DCS={};
 	this.WT={};
 	this.DCSext={};
 	this.images=[];
 	this.index=0;
+
 	this.exre=(function(){return(window.RegExp?new RegExp("dcs(uri)|(ref)|(aut)|(met)|(sta)|(sip)|(pro)|(byt)|(dat)|(p3p)|(cfg)|(redirect)|(cip)","i"):"");})();
 	this.re=(function(){return(window.RegExp?(that.i18n?{"%25":/\%/g,"%26":/\&/g}:{"%09":/\t/g,"%20":/ /g,"%23":/\#/g,"%26":/\&/g,"%2B":/\+/g,"%3F":/\?/g,"%5C":/\\/g,"%22":/\"/g,"%7F":/\x7F/g,"%A0":/\xA0/g}):"");})();
 }
 WebTrends.prototype.dcsGetId=function(){
-	if (this.enabled&&(document.cookie.indexOf(this.fpc+"=")==-1)&&(document.cookie.indexOf("WTLOPTOUT=")==-1)){
+	if (this.enabled&&(document.cookie.indexOf(this.FPCConfig.name+"=")==-1)&&(document.cookie.indexOf("WTLOPTOUT=")==-1)&&this.TPCConfig.enabled){
 		document.write("<scr"+"ipt type='text/javascript' src='"+"http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+this.domain+"/"+this.dcsid+"/wtid.js"+"'><\/scr"+"ipt>");
 	}
+}
+WebTrends.prototype.setCookieTypes = function (types) {
+	this.FPCConfig.enabled = (types === "all" || types == "firstPartyOnly");	
+	this.TPCConfig.enabled = (types === "all");
+	this.TPCConfig.cfgType = (types === "all") ? "":"1"
 }
 WebTrends.prototype.dcsGetCookie=function(name){
 	var cookies=document.cookie.split("; ");
@@ -51,7 +66,7 @@ WebTrends.prototype.dcsGetCookie=function(name){
 	var cmatchCount=cmatch.length;
 	if (cmatchCount>0){
 		idx=0;
-		if ((cmatchCount>1)&&(name==this.fpc)){
+		if ((cmatchCount>1)&&(name==this.FPCConfig.name)){
 			var dLatest=new Date(0);
 			for (i=0;i<cmatchCount;i++){
 				var lv=parseInt(this.dcsGetCrumb(cmatch[i],"lv"));
@@ -95,12 +110,32 @@ WebTrends.prototype.dcsIsFpcSet=function(name,id,lv,ss){
 	}
 	return 2;
 }
+WebTrends.prototype.dcsDeleteCookie=function(name, path, domain) {	
+	var cDelete = name + "=";
+	cDelete += "; expires=expires=Thu, 01 Jan 1970 00:00:01 GMT";
+	cDelete += "; path=" + path;
+	cDelete += (domain) ? ";domain="+domain : "";		
+	document.cookie = cDelete;
+}
 WebTrends.prototype.dcsFPC=function(){
 	if (document.cookie.indexOf("WTLOPTOUT=")!=-1){
 		return;
 	}
+
+	if (!this.FPCConfig.enabled && !this.TPCConfig.enabled)
+		this.WT["ce"] = "0"
+	else if (this.FPCConfig.enabled && !this.TPCConfig.enabled)
+		this.WT["ce"] = "1";
+	else
+		this.WT["ce"] = "2";
+
+	if (!this.FPCConfig.enabled) {
+		this.dcsDeleteCookie(this.FPCConfig.name, "/", this.FPCConfig.domain);
+		return;
+	}
+
 	var WT=this.WT;
-	var name=this.fpc;
+	var name=this.FPCConfig.name;
 	var dCur=new Date();
 	var adj=(dCur.getTimezoneOffset()*60000)+(this.timezone*3600000);
 	dCur.setTime(dCur.getTime()+adj);
@@ -154,10 +189,10 @@ WebTrends.prototype.dcsFPC=function(){
 	WT.co_f=escape(WT.co_f);
 	WT.vtid=(typeof(this.vtid)=="undefined")?WT.co_f:(this.vtid||"");
 	WT.vtvs=(dSes.getTime()-adj).toString();
-	var expiry="; expires="+dExp.toGMTString();
+	var expiry= (this.FPCConfig.expires) ? "; expires="+ new Date(new Date().getTime() + (this.FPCConfig.expires)).toGMTString():"";
 	var cur=dCur.getTime().toString();
 	var ses=dSes.getTime().toString();
-	document.cookie=name+"="+"id="+WT.co_f+":lv="+cur+":ss="+ses+expiry+"; path=/"+(((this.fpcdom!=""))?("; domain="+this.fpcdom):(""));
+	document.cookie=name+"="+"id="+WT.co_f+":lv="+cur+":ss="+ses+expiry+"; path=/"+(((this.FPCConfig.domain!=""))?("; domain="+this.FPCConfig.domain):(""));
 	var rc=this.dcsIsFpcSet(name,WT.co_f,cur,ses);
 	if (rc!=0){
 		WT.co_f=WT.vtvs=WT.vt_f_s=WT.vt_f_d=WT.vt_f_tlh=WT.vt_f_tlv="";
@@ -574,6 +609,9 @@ WebTrends.prototype.dcsVar=function(){
 			DCS.dcsref=window.document.referrer;
 		}
 	}
+
+	DCS["dcscfg"] = this.TPCConfig.cfgType;
+	
 }
 WebTrends.prototype.dcsEscape=function(S, REL){
 	if (REL!=""){
