@@ -313,7 +313,7 @@ h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display:
 
 .blocks li.development {margin-right: 0;}
 
-.blocks li a, .blocks li a:visited {color: #fff; display:block;}
+.blocks li a, .blocks li a:visited {color: #fff;}
 
 @media only screen and (max-width: 420px) { 
   .blocks {text-align: center;}
