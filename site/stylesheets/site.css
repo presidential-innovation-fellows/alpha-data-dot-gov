@@ -35,16 +35,13 @@ body, p, ul, ol, b, i, blockquote, h2, h3, h4, h5, h6 {
 }
 
 .disclaimer a b {font-weight: bold;}
-
 .disclaimer a:hover {color: #ccc;}
 
 #header {margin: 0 0 1.5em 0; }
 
-
 #header h1 {
   font-weight: normal;
-    font-family: 'Abel', Helvetica, sans-serif;
-
+  font-family: 'Abel', Helvetica, sans-serif;
   margin: 0; 
   padding: 0;
 }
@@ -53,15 +50,13 @@ body, p, ul, ol, b, i, blockquote, h2, h3, h4, h5, h6 {
 
 #header h1 {
   display: block;
-  font-size: 2.2em;
+  font-size: 2.3em;
   padding: 1.5em 0 1em 0;
-    font-family: 'Abel', Helvetica, sans-serif;
-
+  font-family: 'Abel', Helvetica, sans-serif;
   text-shadow: 0 1px 0 rgba(255,255,255,.3);
 }
 
 @media only screen and (max-width: 420px) { 
-  
   #header h1 {
   background: none; 
   background-size: contain;
@@ -71,7 +66,6 @@ body, p, ul, ol, b, i, blockquote, h2, h3, h4, h5, h6 {
   padding: .18em 1.75em;
   margin-top: .4em;
   }
-
 }
 
 @media only screen and (orientation: landscape) {
@@ -93,6 +87,40 @@ ul.sublist li a {color: #444;}
   
 }
 
+.next-header {
+  background-color: #8db4d3;
+  padding: .2em 0 .3em 0;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.next-header ul {
+  list-style: none outside;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 1.5em;
+  padding: 0;
+  max-width: 920px;
+}
+
+.next-header ul li {list-style: none; list-style-type: none; display: inline-block; font-size: .75em; padding: 0 2em 0 0;}
+.next-header ul li a:hover {color: #fff; text-decoration: underline;}
+
+.next-nav {
+  font-weight: normal;
+  font-family: 'Abel', Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.next-header ul li.next-us-flag {
+  width: 21px;
+  padding: 0;
+  height: 15px;
+  background: url("../images/us-flag.png");
+  text-indent: -9999px;
+  margin: 0px 10px 0px 0px;
+}
 
 h2  {
   font-weight: normal; 
@@ -111,6 +139,7 @@ h5 {font-size: 1.1em;}
 h6 {font-size: 1.1em;}
 
 #footer h4 {padding-bottom: 0;}
+#footer .row {padding: 0; margin: 0;}
 
 h3, h4, h5, h6 {color: #626262; text-shadow: 0 1px 0 rgba(255,255,255,.9);}
 
@@ -152,7 +181,7 @@ a.feature-link.dev-link {background: #cdcdcd;}
 
 p {font-size: 1.15em; margin: .25em 0; line-height: 1.4em; font-weight: normal; color: #535353;}
 
-a.more {font-weight: normal; text-shadow: 0 1px 0 rgba(255,255,255,.9); background: #fff; background: rgba(255,255,255,.7); color: #444; padding: .5em 1em; border: 1px solid #eee; text-decoration: none; margin: 0;}
+a.more {font-weight: normal; text-shadow: 0 1px 0 rgba(255,255,255,.9); background: #fff; background: rgba(255,255,255,.9); color: #444; padding: .5em 1em; border: 1px solid #eee; text-decoration: none; margin: 0;}
 
 a.more.commerce:hover, a.more.commerce:active {border: 1px solid #481872;}
 a.more.energy:hover, a.more.energy:active {border: 1px solid #83B03C;}
@@ -213,11 +242,7 @@ a.more {display: inline-block; margin-bottom: 1.5em;}
 
 #header .align-right {padding-top: 2.2em;}
 
-@media only screen and (max-width: 770px) {
-
-  #header .align-right {display: none;}
-  
-}
+@media only screen and (max-width: 770px) {#header .align-right {display: none;}}
 
 .align-right {text-align: right;}
 
@@ -282,7 +307,7 @@ abbr {text-decoration: none; border-bottom: none; color: inherit;}
 
 #footer ul li:last-child {border-bottom: none;}
 
-.topic h2{
+.topic h2 {
   margin: 1em 0 .25em 0;
 }
 
@@ -298,13 +323,13 @@ h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display:
   h2.salvo {font-size: 1.6em; margin-bottom: .3em;}
 }
 
-.blocks{
+.blocks {
 	list-style-type: none;
 	margin-top: 42px;
 	text-align: right;
 }
 
-.blocks li{
+.blocks li {
 	display: inline-block;
 	width: 35px;
 	height: 35px;
@@ -318,7 +343,6 @@ h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display:
 }
 
 .blocks li:hover {opacity: 1; -webkit-box-shadow: 0 0 5px rgba(0,0,0,.2);}
-
 .blocks .commerce {background-color: #481872;}
 .blocks .energy {background-color: #83B03C;}
 .blocks .health {background-color: #3E6B85;}
@@ -343,9 +367,6 @@ h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display:
   ul.sublist {margin: 0 0 1em 0;}
   #header h1 {text-align: center;}
   #header h1 {padding: .75em;}
-  
-  
-  
 }
 
 @media only screen and (max-width: 790px) { 
@@ -358,7 +379,7 @@ h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display:
 
 .reveal-modal .panel p {color: #333;}
 
-.reveal-modal .panel p.description {color: red; font-weight: normal; color: #787878; text-shadow: 0 1px 0 rgba(255,255,255,.9);}
+.reveal-modal .panel p.description {font-weight: normal; color: #787878; text-shadow: 0 1px 0 rgba(255,255,255,.9);}
 
 .search-box input{
 	font-family: 'Lato', Helvetica, sans-serif;
@@ -367,7 +388,7 @@ h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display:
 	padding: 10px;
 }
 
-ul.panel-list li a {text-decoration: none; border-bottom: none; background: red;}
+ul.panel-list li a {text-decoration: none; border-bottom: none;}
 
 /*** IE 7 ***/
 
