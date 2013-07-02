@@ -9,7 +9,7 @@
 */
 
 body {
-  background: #fff url(../images/bg.png) top center no-repeat fixed;
+  background: #efefef url(../images/textured-bg.png) top center repeat fixed;
 }
 
 body, p, ul, ol, b, i, blockquote, h2, h3, h4, h5, h6 {
@@ -23,6 +23,7 @@ body, p, ul, ol, b, i, blockquote, h2, h3, h4, h5, h6 {
   color: #fff;
   background: rgba(0,0,0,.6);
   margin-bottom: .5em;
+  border-bottom: 1px solid #fff;
   text-align: center;
 }
 
@@ -42,6 +43,8 @@ body, p, ul, ol, b, i, blockquote, h2, h3, h4, h5, h6 {
 
 #header h1 {
   font-weight: normal;
+    font-family: 'Abel', Helvetica, sans-serif;
+
   margin: 0; 
   padding: 0;
 }
@@ -50,10 +53,11 @@ body, p, ul, ol, b, i, blockquote, h2, h3, h4, h5, h6 {
 
 #header h1 {
   display: block;
-  color: #333;
-  height: 120px;
-  padding: .75em 0 1em 80px;
-  background: url(../images/a.png) center left no-repeat;
+  font-size: 2.2em;
+  padding: 1.5em 0 1em 0;
+    font-family: 'Abel', Helvetica, sans-serif;
+
+  text-shadow: 0 1px 0 rgba(255,255,255,.3);
 }
 
 @media only screen and (max-width: 420px) { 
@@ -61,8 +65,9 @@ body, p, ul, ol, b, i, blockquote, h2, h3, h4, h5, h6 {
   #header h1 {
   background: none; 
   background-size: contain;
-  font-size: 2em; 
+  font-size: 1.6em; 
   height: auto;
+  letter-spacing: 0.05em;
   padding: .18em 1.75em;
   margin-top: .4em;
   }
@@ -138,21 +143,21 @@ a.feature-link.dev-link {background: #cdcdcd;}
 .row .close-reveal-modal {font-size: 2em; font-weight: bold; margin: .9em 1em;}
 
 .commerce h2, a.more.commerce {color: #481872;}
-.energy h2, a.more.energy {color: #8bc541;}
-.health h2, a.more.health {color: #1cb3cc;}
-.education h2, a.more.education {color: #C3423A;}
+.energy h2, a.more.energy {color: #83B03C;}
+.health h2, a.more.health {color: #3E6B85;}
+.education h2, a.more.education {color: #B25445;}
 .finance h2, a.more.finance {color: #f0ab2e;} 
 .development h2, a.more.development {color: #603813;}
 .safety h2, a.more.safety {color: #15226D;}
 
 p {font-size: 1.15em; margin: .25em 0; line-height: 1.4em; font-weight: normal; color: #535353;}
 
-a.more {font-weight: bold; text-shadow: 0 1px 0 rgba(255,255,255,.9); background: #fff; background: rgba(255,255,255,.7); color: #444; padding: .5em 1em; border: 1px solid #eee; text-decoration: none; margin: 0;}
+a.more {font-weight: normal; text-shadow: 0 1px 0 rgba(255,255,255,.9); background: #fff; background: rgba(255,255,255,.7); color: #444; padding: .5em 1em; border: 1px solid #eee; text-decoration: none; margin: 0;}
 
 a.more.commerce:hover, a.more.commerce:active {border: 1px solid #481872;}
-a.more.energy:hover, a.more.energy:active {border: 1px solid #8bc541;}
-a.more.health:hover, a.more.health:active {border: 1px solid #1cb3cc;}
-a.more.education:hover, a.more.education:active {border: 1px solid #C3423A;}
+a.more.energy:hover, a.more.energy:active {border: 1px solid #83B03C;}
+a.more.health:hover, a.more.health:active {border: 1px solid #3E6B85;}
+a.more.education:hover, a.more.education:active {border: 1px solid #B25445;}
 a.more.finance:hover, a.more.finance:active {border: 1px solid #f0ab2e;}
 a.more.development:hover, a.more.development:active {border: 1px solid #603813;}
 a.more.safety:hover, a.more.safety:active {border: 1px solid #15226D;}
@@ -160,17 +165,17 @@ a.more.safety:hover, a.more.safety:active {border: 1px solid #15226D;}
 h4.examples {font-weight: 500;}
 
 .commerce h4.examples {color: #481872;}
-.energy h4.examples {color: #8bc541;}
-.health h4.examples {color: #1cb3cc;}
-.education h4.examples {color: #C3423A;}
+.energy h4.examples {color: #83B03C;}
+.health h4.examples {color: #3E6B85;}
+.education h4.examples {color: #B25445;}
 .finance h4.examples {color: #f0ab2e;}
 .development h4.examples {color: #603813;}
 .safety h4.examples {color: #15226D;}
 
 a.more.commerce:hover, a.more.commerce:active {border: 1px solid #481872}
-a.more.energy:hover, a.more.energy:active {border: 1px solid #8bc541}
-a.more.health:hover, a.more.health:active {border: 1px solid #1cb3cc}
-a.more.education:hover, a.more.education:active {border: 1px solid #C3423A}
+a.more.energy:hover, a.more.energy:active {border: 1px solid #83B03C}
+a.more.health:hover, a.more.health:active {border: 1px solid #3E6B85}
+a.more.education:hover, a.more.education:active {border: 1px solid #B25445;}
 a.more.finance:hover, a.more.finance:active {border: 1px solid #f0ab2e}
 a.more.development:hover, a.more.development:active {border: 1px solid #603813}
 a.more.safety:hover, a.more.safety:active {border: 1px solid #15226D}
@@ -190,7 +195,14 @@ a.more {display: inline-block; margin-bottom: 1.5em;}
 
 .reveal-modal p {margin-bottom: 1em;}
 
-.panel {background: #F2F2F2; background: rgba(230,230,230,.7);}
+.panel {
+  background-color: #fff;
+  -webkit-boxbox-shadow: 0px 2px 5px 1px #dadada;
+  -moz-box-shadow: 0px 2px 5px 1px #dadada;
+  -o-box-shadow: 0px 2px 5px 1px #dadada;
+  -ms-box-shadow: 0px 2px 5px 1px #dadada;
+  box-shadow: 0px 2px 5px 1px #dadada;
+}
 .row.video {margin-bottom: 1.5em;}
 
 .row .description {
@@ -224,8 +236,8 @@ a.more {display: inline-block; margin-bottom: 1.5em;}
 }
 
 .energy .description.bold {background: #C3423A;}
-.health .description.bold {background: #1cb3cc;}
-.education .description.bold {background: #C3423A;}
+.health .description.bold {background: #3E6B85;}
+.education .description.bold {background: #B25445;}
 .finance .description.bold {background: #f0ab2e;}
 .commerce .description.bold {background: #351947;}
 
@@ -233,29 +245,33 @@ a .description.bold img {border: none; width: 100%;}
 
 h2.meta {font-size: .9em;}
 
-h1 {font-family: 'Abel', Helvetica, sans-serif;}
+h1 {font-family: 'Abel', Helvetica, sans-serif; text-transform: uppercase;}
 
 abbr {text-decoration: none; border-bottom: none; color: inherit;}
 
 
 #footer {
+  /*
   background: #222;
   background: rgba(0,0,0,.8);
-  color: #fff;
-  margin-top: 3em;
-  padding: 1em 0;
   -webkit-box-shadow: 0 5px 7px rgba(0,0,0,.4) inset;
-  
+  */
+  color: #333;
+  font-family: 'Abel', Helvetica, sans-serif;
+  border-top: 1px solid #cecece;
+  margin-top: 3em;
+  padding: 2em 0;
+  max-width: 910px;
+  margin: 2em auto;
 }
 
-#footer a {display: block; display: block; padding: .25em 0; color: #fff; color: rgba(255,255,255,.7); }
-#footer a:hover {background: rgba(255,255,255,.05);}
+#footer a {display: block; display: block; padding: .25em 0; color: #003399; }
 #footer p, #footer h4 {
-  color: #fff;
-  text-transform: none; 
+  color: #333;
+  text-transform: uppercase; 
 }
 
-#footer h4 {font-size: 1.2em; color: rgba(255,255,255,.8); text-shadow: none; font-weight: bold;}
+#footer h4 {font-size: 1.2em; font-family: 'Abel', Helvetica, sans-serif; letter-spacing: 0.05em; text-shadow: none; font-weight: normal;}
 
 #footer ul li {
   list-style: none;
@@ -304,9 +320,9 @@ h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display:
 .blocks li:hover {opacity: 1; -webkit-box-shadow: 0 0 5px rgba(0,0,0,.2);}
 
 .blocks .commerce {background-color: #481872;}
-.blocks .energy {background-color: #8bc541;}
-.blocks .health {background-color: #1cb3cc;}
-.blocks .education {background-color: #C3423A;}
+.blocks .energy {background-color: #83B03C;}
+.blocks .health {background-color: #3E6B85;}
+.blocks .education {background-color: #B25445;}
 .blocks .safety {background-color: #15226D;}
 .blocks .finance {background-color: #f0ab2e;} 
 .blocks .development {background-color: #603813;}
