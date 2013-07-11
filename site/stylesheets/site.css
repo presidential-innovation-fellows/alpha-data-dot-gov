@@ -338,7 +338,6 @@ h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display:
 	color: #fff;
 	text-align: center;
 	font-size: 16px;
-	padding-top: 5px;
 	font-weight: bold;
 }
 
@@ -353,7 +352,8 @@ h2.salvo {text-transform: none; letter-spacing: normal; padding: 1em 0; display:
 
 .blocks li.development {margin-right: 0;}
 
-.blocks li a, .blocks li a:visited {color: #fff; display:block;}
+.blocks li a, .blocks li a:visited {color: #fff; display:block; height:100%;}
+.blocks li a abbr {display:block; height:100%; padding-top:8px;}
 
 @media only screen and (max-width: 420px) { 
   .blocks {text-align: center;}
